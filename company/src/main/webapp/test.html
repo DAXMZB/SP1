@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+				function loadQueryHtml() {
+					// 使用 AJAX 加載queryController.java檔案的內容
+					$.ajax({
+						url : "queryController.java",//queryController.java檔案的路徑
+						dataType : "java",
+						success : function(data) {
+							$("#output").java(data);// 在<td>中顯示add.html內容
+						}
+					});
+					event.preventDefault(); // 防止超連結的預設行為（跳轉）
+				}
+			</script>
+
+</body>
+</html>
